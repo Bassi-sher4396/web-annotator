@@ -1,0 +1,23 @@
+{
+    "name": "My Web Annotator",
+    "version": "0.1.0",
+    "description": "highlight or add notes",
+    "permissions": ["storage", "tabs","activeTab"],
+    "host_permissions":["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    
+    "action": {
+      
+      "default_title": "My web annotator",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
